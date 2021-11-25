@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { AppService } from './app.service';
 import { PusherModule } from './modules/pusher/pusher.module';
 
 @Module({
@@ -10,6 +11,7 @@ import { PusherModule } from './modules/pusher/pusher.module';
       cluster: process.env.APP_CLUSTER
     })
   ],
-  controllers: []
+  controllers: [],
+  providers: [AppService]
 })
 export class AppModule {}
