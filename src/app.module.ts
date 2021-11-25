@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
+import { config } from 'dotenv';
 import { AppService } from './app.service';
 import { PusherModule } from './modules/pusher/pusher.module';
+
+config()
 
 @Module({
   imports: [
